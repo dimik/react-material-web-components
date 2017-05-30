@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCCheckbox as MDCCheckboxClass} from 'material-components-web'
+import {MDCCheckbox as MDCCheckboxClass} from '@material/checkbox/dist/mdc.checkbox'
 import classNames from 'classnames'
 
 class MDCCheckbox extends MDCComponent {

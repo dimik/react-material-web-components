@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCFormField as MDCFormFieldClass} from 'material-components-web'
+import {MDCFormField as MDCFormFieldClass} from '@material/form-field/dist/mdc.formField'
 import classNames from 'classnames'
 
 class MDCFormField extends MDCComponent {

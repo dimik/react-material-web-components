@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCPersistentDrawer as MDCPersistentDrawerClass} from 'material-components-web'
+import {MDCPersistentDrawer as MDCPersistentDrawerClass} from '@material/drawer/dist/mdc.drawer'
 import classNames from 'classnames'
 
 class MDCPersistentDrawer extends MDCComponent {

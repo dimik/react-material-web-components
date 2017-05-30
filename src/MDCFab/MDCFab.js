@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import {MDCIcon} from '../MDCIcon'
-import {MDCRipple as MDCRippleClass} from 'material-components-web'
+import {MDCRipple as MDCRippleClass} from '@material/ripple/dist/mdc.ripple'
 import classNames from 'classnames'
 
 class MDCFab extends PureComponent {

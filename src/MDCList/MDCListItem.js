@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
-import {MDCRipple as MDCRippleClass} from 'material-components-web'
+import {MDCRipple as MDCRippleClass} from '@material/ripple'
 import classNames from 'classnames'
 
 class MDCListItem extends PureComponent {

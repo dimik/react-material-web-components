@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCSnackbar as MDCSnackbarClass} from 'material-components-web'
+import {MDCSnackbar as MDCSnackbarClass} from '@material/snackbar/dist/mdc.snackbar'
 import classNames from 'classnames'
 
 class MDCSnackbar extends MDCComponent {
