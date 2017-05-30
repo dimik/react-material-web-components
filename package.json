@@ -47,8 +47,8 @@
     "react:clean": "rimraf node_modules/react node_modules/react-dom",
     "lint": "eslint src scripts",
     "compile": "rimraf lib && babel src --out-dir lib",
-    "build-umd": "cross-env NODE_ENV=production webpack src/index.js out/index.js --output-library ReactMaterialComponents --output-library-target umd",
-    "build-min": "cross-env NODE_ENV=production webpack -p src/index.js out/index.min.js --output-library ReactMaterialComponents --output-library-target umd",
+    "build-umd": "cross-env NODE_ENV=production webpack src/index.js out/index.js --output-library ReactMDC --output-library-target umd",
+    "build-min": "cross-env NODE_ENV=production webpack -p src/index.js out/index.min.js --output-library ReactMDC --output-library-target umd",
     "release": "./scripts/release.sh"
   }
 }
