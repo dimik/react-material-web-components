@@ -4,7 +4,7 @@
   "description": "React Wrapper for Material Design Components",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
-  "repository": "https://gitlab.com/dmitry.poklonskiy/react-material-components",
+  "repository": "dimik/react-material-web-components",
   "keywords": [
     "react",
     "react-component",
