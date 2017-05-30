@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCGridList as MDCGridListClass} from '@material/grid-list/dist/mdc.gridList'
+import {MDCGridList as MDCGridListClass} from 'material-components-web'
 import classNames from 'classnames'
 
 class MDCGridList extends MDCComponent {

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCLinearProgress as MDCLinearProgressClass} from '@material/linear-progress/dist/mdc.linearProgress'
+import {MDCLinearProgress as MDCLinearProgressClass} from 'material-components-web'
 import classNames from 'classnames'
 
 class MDCLinearProgress extends MDCComponent {

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCRipple as MDCRippleClass} from '@material/ripple/dist/mdc.ripple'
+import {MDCRipple as MDCRippleClass} from 'material-components-web'
 import classNames from 'classnames'
 
 class MDCRipple extends MDCComponent {

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
 import {MDCIcon} from '../MDCIcon'
-import {MDCIconToggle as MDCIconToggleClass} from '@material/icon-toggle/dist/mdc.iconToggle'
+import {MDCIconToggle as MDCIconToggleClass} from 'material-components-web'
 import classNames from 'classnames'
 
 class MDCIconToggle extends MDCComponent {

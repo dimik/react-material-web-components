@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
 import {MDCTextfieldLabel} from '.'
-import {MDCTextfield as MDCTextfieldClass} from '@material/textfield/dist/mdc.textfield'
+import {MDCTextfield as MDCTextfieldClass} from 'material-components-web'
 import classNames from 'classnames'
 import uniqueId from 'lodash.uniqueid'
 

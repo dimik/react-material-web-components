@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCTemporaryDrawer as MDCTemporaryDrawerClass} from '@material/drawer/dist/mdc.drawer'
+import {MDCTemporaryDrawer as MDCTemporaryDrawerClass} from 'material-components-web'
 import classNames from 'classnames'
 
 class MDCTemporaryDrawer extends MDCComponent {

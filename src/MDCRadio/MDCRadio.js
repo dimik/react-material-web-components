@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCRadio as MDCRadioClass} from '@material/radio/dist/mdc.radio'
+import {MDCRadio as MDCRadioClass} from 'material-components-web'
 import classNames from 'classnames'
 
 class MDCRadio extends MDCComponent {

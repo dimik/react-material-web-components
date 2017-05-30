@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
 import {MDCList} from '../MDCList'
-import {MDCSimpleMenu as MDCSimpleMenuClass} from '@material/menu/dist/mdc.menu'
+import {MDCSimpleMenu as MDCSimpleMenuClass} from 'material-components-web'
 import classNames from 'classnames'
 
 class MDCSimpleMenu extends MDCComponent {

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCTabs as MDCTabsClass} from '@material/tabs/dist/mdc.tabs'
+import {MDCTabs as MDCTabsClass} from 'material-components-web'
 import classNames from 'classnames'
 
 class MDCTabs extends MDCComponent {
