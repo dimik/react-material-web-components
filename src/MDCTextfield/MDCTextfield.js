@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
 import {MDCTextfieldLabel} from '.'
-import {MDCTextfield as MDCTextfieldClass} from '@material/textfield'
+import {MDCTextfield as MDCTextfieldClass} from '@material/textfield/dist/mdc.textfield'
 import classNames from 'classnames'
 import uniqueId from 'lodash.uniqueid'
 
@@ -42,7 +42,7 @@ class MDCTextfield extends MDCComponent {
   _isFocused() {
     return document.activeElement === this.input_
   }
-  
+
   render() {
     const {
       children,
@@ -62,7 +62,7 @@ class MDCTextfield extends MDCComponent {
     const hasValue = Boolean(this.props.value)
     const cssClasses = classNames({
       'mdc-textfield': true,
-      'mdc-textfield--dense': dense,      
+      'mdc-textfield--dense': dense,
       'mdc-textfield--disabled': this.props.disabled,
       'mdc-textfield--fullwidth': fullwidth,
       'mdc-textfield--multiline': multiline,

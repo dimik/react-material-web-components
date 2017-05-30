@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
 import {MDCList} from '../MDCList'
-import {MDCSelect as MDCSelectClass} from '@material/select'
+import {MDCSelect as MDCSelectClass} from '@material/select/dist/mdc.select'
 import classNames from 'classnames'
 
 class MDCSelect extends MDCComponent {

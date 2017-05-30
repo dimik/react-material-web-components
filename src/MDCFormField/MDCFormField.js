@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCFormField as MDCFormFieldClass} from '@material/form-field'
+import {MDCFormField as MDCFormFieldClass} from '@material/form-field/dist/mdc.formField'
 import classNames from 'classnames'
 
 class MDCFormField extends MDCComponent {
@@ -16,7 +16,7 @@ class MDCFormField extends MDCComponent {
   attachTo(el) {
     return new MDCFormFieldClass(el)
   }
-  
+
   render() {
     const {
       alignEnd,
@@ -30,7 +30,7 @@ class MDCFormField extends MDCComponent {
     }, className)
     return (
       <div
-        {...otherProps}        
+        {...otherProps}
         className={cssClasses}
         ref={el => this.root_ = el}
       >

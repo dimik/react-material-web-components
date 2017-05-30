@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCTemporaryDrawer as MDCTemporaryDrawerClass} from '@material/drawer'
+import {MDCTemporaryDrawer as MDCTemporaryDrawerClass} from '@material/drawer/dist/mdc.drawer'
 import classNames from 'classnames'
 
 class MDCTemporaryDrawer extends MDCComponent {
@@ -62,7 +62,7 @@ class MDCTemporaryDrawer extends MDCComponent {
     this.unlisten(
       'MDCTemporarytDrawer:close',
       this.closeListener_
-    ) 
+    )
   }
 
   render() {

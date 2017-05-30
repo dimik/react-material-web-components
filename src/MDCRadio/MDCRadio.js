@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCRadio as MDCRadioClass} from '@material/radio'
+import {MDCRadio as MDCRadioClass} from '@material/radio/dist/mdc.radio'
 import classNames from 'classnames'
 
 class MDCRadio extends MDCComponent {
@@ -16,7 +16,7 @@ class MDCRadio extends MDCComponent {
   attachTo(el) {
     return new MDCRadioClass(el)
   }
-  
+
   render() {
     const {
       children,

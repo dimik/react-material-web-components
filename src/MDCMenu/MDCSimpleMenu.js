@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
 import {MDCList} from '../MDCList'
-import {MDCSimpleMenu as MDCSimpleMenuClass} from '@material/menu'
+import {MDCSimpleMenu as MDCSimpleMenuClass} from '@material/menu/dist/mdc.menu'
 import classNames from 'classnames'
 
 class MDCSimpleMenu extends MDCComponent {
@@ -26,7 +26,7 @@ class MDCSimpleMenu extends MDCComponent {
   attachTo(el) {
     return new MDCSimpleMenuClass(el)
   }
-  
+
   render() {
     const {
       children,

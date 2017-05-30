@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
 import {MDCIcon} from '../MDCIcon'
-import {MDCIconToggle as MDCIconToggleClass} from '@material/icon-toggle'
+import {MDCIconToggle as MDCIconToggleClass} from '@material/icon-toggle/dist/mdc.iconToggle'
 import classNames from 'classnames'
 
 class MDCIconToggle extends MDCComponent {
@@ -42,7 +42,7 @@ class MDCIconToggle extends MDCComponent {
       this.component_.refreshToggleData()
     }
   }
- 
+
   componentWillReceiveProps(nextProps) {
     const isOn = nextProps.toggle === 'on'
     if (this.component_.on !== isOn) {
@@ -81,7 +81,7 @@ class MDCIconToggle extends MDCComponent {
       this.changeListener_ = e => this.props.onChange(
         e,
         e.detail.isOn ? 'on' : 'off'
-      ) 
+      )
     )
   }
 

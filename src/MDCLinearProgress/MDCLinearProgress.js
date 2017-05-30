@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCLinearProgress as MDCLinearProgressClass} from '@material/linear-progress'
+import {MDCLinearProgress as MDCLinearProgressClass} from '@material/linear-progress/dist/mdc.linearProgress'
 import classNames from 'classnames'
 
 class MDCLinearProgress extends MDCComponent {
@@ -18,7 +18,7 @@ class MDCLinearProgress extends MDCComponent {
   attachTo(el) {
     return new MDCLinearProgressClass(el)
   }
-  
+
   render() {
     const {
       accent,
@@ -36,7 +36,7 @@ class MDCLinearProgress extends MDCComponent {
     }, className)
     return (
       <div
-        {...otherProps}        
+        {...otherProps}
         className={cssClasses}
         ref={el => this.root_ = el}
       >

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCDialog as MDCDialogClass} from '@material/dialog'
+import {MDCDialog as MDCDialogClass} from '@material/dialog/dist/mdc.dialog'
 import classNames from 'classnames'
 
 class MDCDialog extends MDCComponent {

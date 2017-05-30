@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCToolbar as MDCToolbarClass} from '@material/toolbar'
+import {MDCToolbar as MDCToolbarClass} from '@material/toolbar/dist/mdc.toolbar'
 import classNames from 'classnames'
 
 class MDCToolbar extends MDCComponent {
@@ -28,7 +28,7 @@ class MDCToolbar extends MDCComponent {
 
     this._setupListeners()
   }
-  
+
   componentWillUnmount() {
     this._clearListeners()
 

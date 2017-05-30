@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import {MDCIcon} from '../MDCIcon'
-import {MDCRipple as MDCRippleClass} from '@material/ripple'
+import {MDCRipple as MDCRippleClass} from '@material/ripple/dist/mdc.ripple'
 import classNames from 'classnames'
 
 class MDCFab extends PureComponent {
@@ -23,9 +23,9 @@ class MDCFab extends PureComponent {
   componentDidMount() {
     if (this.props.ripple) {
       this.ripple_ = MDCRippleClass.attachTo(this.root_)
-    }  
+    }
   }
-  
+
   componentWillUnmount() {
     if (this.ripple_) {
       // this.ripple_.deactivate()
