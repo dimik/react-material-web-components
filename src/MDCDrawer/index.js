@@ -1,7 +1,0 @@
-export MDCPermanentDrawer from './MDCPermanentDrawer'
-export MDCPersistentDrawer from './MDCPersistentDrawer'
-export MDCTemporaryDrawer from './MDCTemporaryDrawer'
-export MDCDrawerContent from './MDCDrawerContent'
-export MDCDrawerFooter from './MDCDrawerFooter'
-export MDCDrawerHeader from './MDCDrawerHeader'
-export MDCDrawerToolbarSpacer from './MDCDrawerToolbarSpacer'

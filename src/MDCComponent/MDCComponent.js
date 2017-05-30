@@ -20,7 +20,7 @@ class MDCComponent extends PureComponent {
   getComponent() {
     return this.component_
   }
-  
+
   attachTo(el) {
   }
 
