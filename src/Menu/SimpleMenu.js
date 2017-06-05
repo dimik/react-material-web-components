@@ -11,6 +11,8 @@ class SimpleMenu extends MDCComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    onCancel: PropTypes.func,
+    onChange: PropTypes.func,
     open: PropTypes.bool,
     openFrom: PropTypes.shape({
       horizontal: PropTypes.oneOf(['left', 'right']),
@@ -20,7 +22,15 @@ class SimpleMenu extends MDCComponent {
   }
 
   static defaultProps = {
+    onCancel: () => {},
+    onChange: () => {},
     tabIndex: -1,
+  }
+
+  componentDidMount() {
+    super.componentDidMount()
+
+    this._setupListeners()
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,8 +39,39 @@ class SimpleMenu extends MDCComponent {
     }
   }
 
+  componentWillUnmount() {
+    this._clearListeners()
+
+    super.componentWillUnmount()
+  }
+
   attachTo(el) {
     return new MDCSimpleMenu(el)
+  }
+
+  _setupListeners() {
+    this.listen(
+      'MDCSimpleMenu:selected',
+      this.changeListener_ = e => this.props.onChange(
+        e,
+        e.detail,
+      )
+    )
+    this.listen(
+      'MDCSimpleMenu:cancel',
+      this.cancelListener_ = () => this.props.onCancel()
+    )
+  }
+
+  _clearListeners() {
+    this.unlisten(
+      'MDCSimpleMenu:selected',
+      this.changeListener_
+    )
+    this.unlisten(
+      'MDCSimpleMenu:cancel',
+      this.cancelListener_
+    )
   }
 
   render() {
