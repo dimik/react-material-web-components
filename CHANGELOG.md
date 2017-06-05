@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.7"></a>
+## [0.0.7](https://github.com/dimik/react-material-web-components/compare/v0.0.6...v0.0.7) (2017-06-05)
+
+
+### Bug Fixes
+
+* **components:** Menu open should trigger component open for autoPosition ([f30ef00](https://github.com/dimik/react-material-web-components/commit/f30ef00))
+
+
+
 <a name="0.0.6"></a>
 ## [0.0.6](https://github.com/dimik/react-material-web-components/compare/v0.0.5...v0.0.6) (2017-05-30)
 
