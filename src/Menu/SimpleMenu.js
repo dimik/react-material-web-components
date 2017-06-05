@@ -80,6 +80,8 @@ class SimpleMenu extends MDCComponent {
       className,
       open,
       openFrom,
+      onCancel,
+      onChange,
       ...otherProps,
     } = this.props
     const cssClasses = classNames({
