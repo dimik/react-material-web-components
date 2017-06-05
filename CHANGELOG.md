@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.8"></a>
+## [0.0.8](https://github.com/dimik/react-material-web-components/compare/v0.0.7...v0.0.8) (2017-06-05)
+
+
+### Bug Fixes
+
+* **components:** Menu fix missprint ([38c1a0f](https://github.com/dimik/react-material-web-components/commit/38c1a0f))
+
+
+
 <a name="0.0.7"></a>
 ## [0.0.7](https://github.com/dimik/react-material-web-components/compare/v0.0.6...v0.0.7) (2017-06-05)
 
