@@ -23,6 +23,12 @@ class SimpleMenu extends MDCComponent {
     tabIndex: -1,
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.open !== this.component_.open) {
+      this.component_.open = nextProps.open
+    }
+  }
+
   attachTo(el) {
     return new MDCSimpleMenu(el)
   }
@@ -38,7 +44,7 @@ class SimpleMenu extends MDCComponent {
     const cssClasses = classNames({
       'mdc-simple-menu': true,
       'mdc-simple-menu--open': open,
-      [`mdc-simple-menu--open-from-${openFrom.vertical}-${openFrom.horizontal}`]: openFrom,
+      [`mdc-simple-menu--open-from-${opentFrom && openFrom.vertical}-${openFrom && openFrom.horizontal}`]: openFrom,
     }, className)
     return (
       <div
