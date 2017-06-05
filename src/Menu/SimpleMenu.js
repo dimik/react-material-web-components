@@ -44,7 +44,7 @@ class SimpleMenu extends MDCComponent {
     const cssClasses = classNames({
       'mdc-simple-menu': true,
       'mdc-simple-menu--open': open,
-      [`mdc-simple-menu--open-from-${opentFrom && openFrom.vertical}-${openFrom && openFrom.horizontal}`]: openFrom,
+      [`mdc-simple-menu--open-from-${openFrom && openFrom.vertical}-${openFrom && openFrom.horizontal}`]: openFrom,
     }, className)
     return (
       <div
