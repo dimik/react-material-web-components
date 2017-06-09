@@ -19,7 +19,7 @@ class ListItemText extends PureComponent {
   _renderSecondaryText() {
     const {secondaryText} = this.props
     if (secondaryText) {
-      const cssClass = 'mdc-list-item__text_secondaryText'
+      const cssClass = 'mdc-list-item__text__secondary'
       return React.isValidElement(secondaryText) ?
         React.cloneElement(
           secondaryText,
