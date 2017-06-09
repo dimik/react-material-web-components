@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
-import CardTitle from '.'
-import CardSubtitle from '.'
+import {CardTitle} from '.'
+import {CardSubtitle} from '.'
 import classNames from 'classnames'
 
 class CardPrimary extends PureComponent {
