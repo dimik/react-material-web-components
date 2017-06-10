@@ -6,11 +6,13 @@ class Icon extends PureComponent {
   static displayName = 'Icon'
 
   static propTypes = {
+    accent: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
     name: PropTypes.string,
     // Is used by IconToggle
     onRef: PropTypes.func,
+    primary: PropTypes.bool,
     tagName: PropTypes.string,
   }
 
@@ -20,15 +22,19 @@ class Icon extends PureComponent {
 
   render() {
     const {
+      accent,
       children,
       className,
       name,
       onRef,
+      primary,
       tagName,
       ...otherProps,
     } = this.props
     const cssClasses = classNames({
+      'mdc-theme--accent': accent,
       'material-icons': name,
+      'mdc-theme--primary': primary,
     }, className)
     return React.createElement(
       tagName,
