@@ -18,6 +18,7 @@ class SimpleMenu extends MDCComponent {
       horizontal: PropTypes.oneOf(['left', 'right']),
       vertical: PropTypes.oneOf(['top', 'bottom']),
     }),
+    style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     tabIndex: PropTypes.number,
   }
 
@@ -82,6 +83,7 @@ class SimpleMenu extends MDCComponent {
       openFrom,
       onCancel,
       onChange,
+      style,
       ...otherProps,
     } = this.props
     const cssClasses = classNames({
@@ -94,6 +96,7 @@ class SimpleMenu extends MDCComponent {
         {...otherProps}
         className={cssClasses}
         ref={el => this.root_ = el}
+        style={{transform: 'scale(0)', ...style}}
       >
         <List
           aria-hidden="true"
