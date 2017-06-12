@@ -7,7 +7,7 @@ class IconMenu extends React.PureComponent {
 
   static propTypes = {
     children: PropTypes.node,
-    name: PropTypes.string,
+    iconName: PropTypes.string,
     open: PropTypes.bool,
   }
 
@@ -41,7 +41,7 @@ class IconMenu extends React.PureComponent {
       <MenuAnchor>
         <Icon
           href="javascript:void(0);"
-          name={this.props.name}
+          name={this.props.iconName}
           onClick={this.handleClick}
           tagName="a"
         />
