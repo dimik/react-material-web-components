@@ -16,10 +16,6 @@ class Fab extends PureComponent {
     ripple: PropTypes.bool,
   }
 
-  static defaultProps = {
-    tagName: 'li',
-  }
-
   componentDidMount() {
     if (this.props.ripple) {
       this.ripple_ = MDCRipple.attachTo(this.root_)
