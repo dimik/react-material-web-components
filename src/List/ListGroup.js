@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
+import {ListGroupSubheader} from '.'
 import classNames from 'classnames'
 
 class ListGroup extends PureComponent {
@@ -8,6 +9,7 @@ class ListGroup extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    subheader: PropTypes.node,
     tagName: PropTypes.string,
   }
 
@@ -19,6 +21,7 @@ class ListGroup extends PureComponent {
     const {
       children,
       className,
+      subheader,
       tagName,
       ...otherProps,
     } = this.props
@@ -26,6 +29,7 @@ class ListGroup extends PureComponent {
     return React.createElement(
       tagName,
       {...otherProps, className: cssClasses},
+      subheader && (<ListGroupSubheader>{subheader}</ListGroupSubheader>),
       children
     )
   }

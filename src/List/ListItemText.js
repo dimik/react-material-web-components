@@ -8,7 +8,7 @@ class ListItemText extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    secondaryText: PropTypes.node,
+    secondary: PropTypes.node,
     tagName: PropTypes.oneOf(['span', 'div']),
   }
 
@@ -17,15 +17,15 @@ class ListItemText extends PureComponent {
   }
 
   _renderSecondaryText() {
-    const {secondaryText} = this.props
-    if (secondaryText) {
+    const {secondary} = this.props
+    if (secondary) {
       const cssClass = 'mdc-list-item__text__secondary'
-      return React.isValidElement(secondaryText) ?
+      return React.isValidElement(secondary) ?
         React.cloneElement(
-          secondaryText,
-          {className: classNames(cssClass, secondaryText.props.className)}
+          secondary,
+          {className: classNames(cssClass, secondary.props.className)}
         ) : (
-          <span className={cssClass}>{secondaryText}</span>
+          <span className={cssClass}>{secondary}</span>
         )
     }
   }
@@ -34,7 +34,7 @@ class ListItemText extends PureComponent {
     const {
       children,
       className,
-      secondaryText,
+      secondary,
       tagName,
       ...otherProps,
     } = this.props

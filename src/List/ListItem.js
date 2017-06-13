@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
+import {ListItemText} from '.'
 import {MDCRipple} from '@material/ripple/dist/mdc.ripple'
 import classNames from 'classnames'
 
@@ -10,7 +11,9 @@ class ListItem extends PureComponent {
     children: PropTypes.node,
     className: PropTypes.string,
     endDetail: PropTypes.element,
+    primaryText: PropTypes.node,
     ripple: PropTypes.bool,
+    secondaryText: PropTypes.node,
     startDetail: PropTypes.element,
     tagName: PropTypes.string,
   }
@@ -66,8 +69,10 @@ class ListItem extends PureComponent {
       children,
       className,
       endDetail,
-      startDetail,
+      primaryText,
       ripple,
+      secondaryText,
+      startDetail,
       tagName,
       ...otherProps,
     } = this.props
@@ -76,7 +81,7 @@ class ListItem extends PureComponent {
       tagName,
       {...otherProps, className: cssClasses, ...(ripple && {ref: el => this.root_ = el})},
       this._renderStartDetail(),
-      children,
+      children || (<ListItemText secondary={secondaryText}>{primaryText}</ListItemText>),
       this._renderEndDetail()
     )
   }

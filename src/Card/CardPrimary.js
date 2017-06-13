@@ -10,25 +10,25 @@ class CardPrimary extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    subtitle: PropTypes.string,
-    title: PropTypes.string,
+    subtitleText: PropTypes.node,
     titleLarge: PropTypes.bool,
+    titleText: PropTypes.node,
   }
 
   _renderTitle() {
     const {
-      title,
+      titleText,
       titleLarge,
     } = this.props
-    return title && (
-      <CardTitle large={titleLarge}>{title}</CardTitle>
+    return titleText && (
+      <CardTitle large={titleLarge}>{titleText}</CardTitle>
     )
   }
 
   _renderSubtitle() {
-    const {subtitle} = this.props
-    return subtitle && (
-      <CardSubtitle>{subtitle}</CardSubtitle>
+    const {subtitleText} = this.props
+    return subtitleText && (
+      <CardSubtitle>{subtitleText}</CardSubtitle>
     )
   }
 
@@ -36,9 +36,9 @@ class CardPrimary extends PureComponent {
     const {
       children,
       className,
-      subtitle,
-      title,
+      subtitleText,
       titleLarge,
+      titleText,
       ...otherProps,
     } = this.props
     const cssClasses = classNames('mdc-card__primary', className)
