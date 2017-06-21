@@ -1,5 +1,7 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
+import {MDCComponent} from '../MDCComponent'
+import {MDCTab} from '@material/tabs/dist/mdc.tabs'
 import {Icon} from '..'
 import classNames from 'classnames'
 
@@ -13,6 +15,10 @@ class Tab extends PureComponent {
     icon: PropTypes.element,
     iconName: PropTypes.string,
     withIconAndText: PropTypes.bool,
+  }
+
+  attachTo(el) {
+    return new MDCTab(el)
   }
 
   _renderIcon() {
@@ -63,6 +69,7 @@ class Tab extends PureComponent {
       <a
         {...otherProps}
         className={cssClasses}
+        ref={el => this.root_ = el}
       >
         {this._renderIcon()}
         {this._renderText()}

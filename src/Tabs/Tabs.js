@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {MDCComponent} from '../MDCComponent'
-import {MDCTabs} from '@material/tabs/dist/mdc.tabs'
+import {MDCTabBar} from '@material/tabs/dist/mdc.tabs'
 import classNames from 'classnames'
 
 class Tabs extends MDCComponent {
@@ -35,7 +35,7 @@ class Tabs extends MDCComponent {
   }
 
   attachTo(el) {
-    return new MDCTabs(el)
+    return new MDCTabBar(el)
   }
 
   _setupListeners() {
