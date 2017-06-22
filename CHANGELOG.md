@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.9"></a>
+## [0.2.9](https://github.com/dimik/react-material-web-components/compare/v0.2.8...v0.2.9) (2017-06-22)
+
+
+### Bug Fixes
+
+* **components:** Remove fixedAdjustElementSelector prop from header tag ([50d78a4](https://github.com/dimik/react-material-web-components/commit/50d78a4))
+
+
+
 <a name="0.2.8"></a>
 ## [0.2.8](https://github.com/dimik/react-material-web-components/compare/v0.2.7...v0.2.8) (2017-06-22)
 
