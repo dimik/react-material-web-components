@@ -11,6 +11,7 @@ class Toolbar extends MDCComponent {
     children: PropTypes.node,
     className: PropTypes.string,
     fixed: PropTypes.bool,
+    fixedAdjustElementSelector: PropTypes.string,
     fixedAtLastRow: PropTypes.bool,
     fixedLastRowOnly: PropTypes.bool,
     flexible: PropTypes.bool,
@@ -23,12 +24,22 @@ class Toolbar extends MDCComponent {
 
   static defaultProps = {
     onChange: () => {},
+    fixedAdjustElementSelector: '.mdc-toolbar-fixed-adjust',
   }
 
   componentDidMount() {
     super.componentDidMount()
 
     this._setupListeners()
+  }
+
+  componentDidUpdate() {
+    this.component_.destroy()
+    this.component_ = this.attachTo(this.root_)
+    const fixedAdjustElement = document.querySelector(this.props.fixedAdjustElementSelector)
+    if (fixedAdjustElement) {
+      this.component_.fixedAdjustElement = fixedAdjustElement
+    }
   }
 
   componentWillUnmount() {
