@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.8"></a>
+## [0.2.8](https://github.com/dimik/react-material-web-components/compare/v0.2.7...v0.2.8) (2017-06-22)
+
+
+### Bug Fixes
+
+* **components:** Fix for Toolbar behaviors update ([8f1ba2b](https://github.com/dimik/react-material-web-components/commit/8f1ba2b))
+
+
+
 <a name="0.2.7"></a>
 ## [0.2.7](https://github.com/dimik/react-material-web-components/compare/v0.2.6...v0.2.7) (2017-06-22)
 
