@@ -71,6 +71,7 @@ class Toolbar extends MDCComponent {
       children,
       className,
       fixed,
+      fixedAdjustElementSelector,
       fixedAtLastRow,
       fixedLastRowOnly,
       flexible,
