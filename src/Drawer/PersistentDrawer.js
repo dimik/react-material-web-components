@@ -26,9 +26,9 @@ class PersistentDrawer extends MDCComponent {
     this._setupListeners()
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     const {open} = this.props
-    if (!prevProps.open && open) {
+    if (this.component_.open !== open) {
       this.component_.open = open
     }
   }
