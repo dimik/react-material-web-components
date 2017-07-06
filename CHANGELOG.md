@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.11"></a>
+## [0.2.11](https://github.com/dimik/react-material-web-components/compare/v0.2.10...v0.2.11) (2017-07-06)
+
+
+### Bug Fixes
+
+* **components:** Fix drawer open state change ([6a96f95](https://github.com/dimik/react-material-web-components/commit/6a96f95))
+
+
+
 <a name="0.2.10"></a>
 ## [0.2.10](https://github.com/dimik/react-material-web-components/compare/v0.2.9...v0.2.10) (2017-07-05)
 
