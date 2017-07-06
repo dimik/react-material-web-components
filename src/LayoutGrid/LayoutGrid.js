@@ -8,21 +8,28 @@ class LayoutGrid extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    fixedColumnWidth: PropTypes.bool,
   }
 
   render() {
     const {
       children,
       className,
+      fixedColumnWidth,
       ...otherProps,
     } = this.props
-    const cssClasses = classNames('mdc-layout-grid', className)
+    const cssClasses = classNames({
+      'mdc-layout-grid': true,
+      'mdc-layout-grid--fixed-column-width': fixedColumnWidth,
+    }, className)
     return (
       <div
         {...otherProps}
         className={cssClasses}
       >
-        {children}
+        <div className="mdc-layout-grid__inner">
+          {children}
+        </div>
       </div>
     )
   }
