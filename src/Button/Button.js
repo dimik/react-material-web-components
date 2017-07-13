@@ -17,6 +17,20 @@ class Button extends PureComponent {
     ripple: PropTypes.bool,
   }
 
+  componentDidMount() {
+    if (this.props.ripple) {
+      this.ripple_ = MDCRipple.attachTo(this.root_)
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.ripple_) {
+      this.ripple_.destroy()
+      this.ripple_ = null
+    }
+    this.root_ = null
+  }
+
   render() {
     const {
       accent,
@@ -41,7 +55,7 @@ class Button extends PureComponent {
       <button
         {...otherProps}
         className={cssClasses}
-        {...(ripple ? {ref: el => (el && MDCRipple.attachTo(el))} : null)}
+        ref={el => this.root_ = el}
       >
         {children}
       </button>

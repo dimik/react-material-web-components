@@ -24,7 +24,6 @@ class Fab extends PureComponent {
 
   componentWillUnmount() {
     if (this.ripple_) {
-      // this.ripple_.deactivate()
       this.ripple_.destroy()
       this.ripple_ = null
     }
