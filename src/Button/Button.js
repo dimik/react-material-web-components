@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
+import {MDCRipple} from '@material/ripple/dist/mdc.ripple'
 import classNames from 'classnames'
 
 class Button extends PureComponent {
@@ -40,6 +41,7 @@ class Button extends PureComponent {
       <button
         {...otherProps}
         className={cssClasses}
+        {...(ripple ? {ref: el => (el && MDCRipple.attachTo(el))} : null)}
       >
         {children}
       </button>
