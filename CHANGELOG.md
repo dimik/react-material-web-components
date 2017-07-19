@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.16"></a>
+## [0.2.16](https://github.com/dimik/react-material-web-components/compare/v0.2.15...v0.2.16) (2017-07-19)
+
+
+### Bug Fixes
+
+* **components:** Add custom children support to DialogHeader ([8e0d43c](https://github.com/dimik/react-material-web-components/commit/8e0d43c))
+
+
+
 <a name="0.2.15"></a>
 ## [0.2.15](https://github.com/dimik/react-material-web-components/compare/v0.2.14...v0.2.15) (2017-07-19)
 
