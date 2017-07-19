@@ -10,19 +10,73 @@ class Dialog extends MDCComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    onAccept: PropTypes.func,
+    onCancel: PropTypes.func,
+    open: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    onAccept: () => {},
+    onCancel: () => {},
+  }
+
+  componentDidMount() {
+    super.componentDidMount()
+
+    this._setupListeners()
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.open !== this.component_.open) {
+      this.component_[nextProps.open ? 'show' : 'close']()
+    }
+  }
+
+  componentWillUnmount() {
+    this._clearListeners()
+
+    super.componentWillUnmount()
   }
 
   attachTo(el) {
     return new MDCDialog(el)
   }
 
+  _setupListeners() {
+    this.listen(
+      'MDCDialog:accept',
+      this.acceptListener_ = () => this.props.onAccept()
+    )
+    this.listen(
+      'MDCDialog:cancel',
+      this.cancelListener_ = () => this.props.onCancel()
+    )
+  }
+
+  _clearListeners() {
+    this.unlisten(
+      'MDCDialog:accept',
+      this.acceptListener_
+    )
+    this.unlisten(
+      'MDCDialog:cancel',
+      this.cancelListener_
+    )
+  }
+
   render() {
     const {
       children,
       className,
+      onAccept,
+      onCancel,
+      open,
       ...otherProps,
     } = this.props
-    const cssClasses = classNames('mdc-dialog', className)
+    const cssClasses = classNames({
+      'mdc-dialog': true,
+      'mdc-dialog--open': open,
+    }, className)
     return (
       <aside
         {...otherProps}
