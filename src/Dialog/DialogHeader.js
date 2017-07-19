@@ -8,12 +8,32 @@ class DialogHeader extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    title: PropTypes.node,
+  }
+
+  _renderTitle() {
+    const {title} = this.props
+    if (title) {
+      if (React.isValidElement(title)) {
+        const cssClasses = classNames(
+          'mdc-dialog__header__title',
+          title.props.className
+        )
+        return React.cloneElement(title, {
+          className: cssClasses,
+        })
+      }
+      return (
+        <h2 className="mdc-dialog__header__title">{title}</h2>
+      )
+    }
   }
 
   render() {
     const {
       children,
       className,
+      title,
       ...otherProps,
     } = this.props
     const cssClasses = classNames('mdc-dialog__header', className)
@@ -22,9 +42,8 @@ class DialogHeader extends PureComponent {
         {...otherProps}
         className={cssClasses}
       >
-        {React.isValidElement(children) ? children : (
-          <h2 className="mdc-dialog__header__title">{children}</h2>
-        )}
+        {this._renderTitle()}
+        {children}
       </header>
     )
   }
