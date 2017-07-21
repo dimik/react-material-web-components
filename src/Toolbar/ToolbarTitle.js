@@ -23,7 +23,9 @@ class ToolbarTitle extends PureComponent {
       ...otherProps,
     } = this.props
     const cssClasses = classNames('mdc-toolbar__title', className)
-    return React.createElement(
+    return React.isValidElement(children) ? React.cloneElement(children, {
+      className: classNames('mdc-toolbar__title', children.props.className),
+    }) : React.createElement(
       tagName,
       {...otherProps, className: cssClasses},
       children
