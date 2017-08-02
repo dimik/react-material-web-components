@@ -1,5 +1,6 @@
 export Card from './Card'
 export CardActions from './CardActions'
+export CardHorizontalBlock from './CardHorizontalBlock'
 export CardMedia from './CardMedia'
 export CardMediaItem from './CardMediaItem'
 export CardPrimary from './CardPrimary'

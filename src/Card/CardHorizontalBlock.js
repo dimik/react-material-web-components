@@ -2,26 +2,21 @@ import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-class Card extends PureComponent {
-  static displayName = 'Card'
+class CardHorizontalBlock extends PureComponent {
+  static displayName = 'CardHorizontalBlock'
 
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    themeDark: PropTypes.bool,
   }
 
   render() {
     const {
       children,
       className,
-      themeDark,
       ...otherProps,
     } = this.props
-    const cssClasses = classNames({
-      'mdc-card': true,
-      'mdc-card--theme-dark': themeDark,
-    }, className)
+    const cssClasses = classNames('mdc-card__horizontal-block', className)
     return (
       <div
         {...otherProps}
@@ -33,4 +28,4 @@ class Card extends PureComponent {
   }
 }
 
-export default Card
+export default CardHorizontalBlock
