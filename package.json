@@ -36,6 +36,7 @@
     "@material/radio": "*",
     "@material/ripple": "*",
     "@material/select": "*",
+    "@material/slider": "*",
     "@material/snackbar": "*",
     "@material/switch": "*",
     "@material/tabs": "*",
