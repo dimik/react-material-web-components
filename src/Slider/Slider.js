@@ -164,7 +164,7 @@ class Slider extends MDCComponent {
       >
         <div className="mdc-slider__track-container">
           <div className="mdc-slider__track"/>
-          {discrete && displayMarkers (
+          {discrete && displayMarkers && (
             <div className="mdc-slider__track-marker-container"/>
           )}
         </div>
